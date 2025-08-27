@@ -4,6 +4,8 @@ require_once "Data.php";
 require_once "Cliente.php";
 require_once "Vendedor.php";
 require_once "Produto.php";
+require_once "ItemPedido.php";
+require_once "Pedido.php";
 //pessoa cliente teste
 $data1 = new Data(12, 02, 2025);
 $data1->imprimirDataBanco();
@@ -33,3 +35,8 @@ echo "</br>";
 echo "<hr>";
 $produto1 = new Produto(1234, "Pão", 12.00);
 $produto1->imprimir();
+//item pedido
+echo "</br>";
+$itempedido1 = new ItemPedido($produto1, 3);
+$itempedido1->imprimir();
+
